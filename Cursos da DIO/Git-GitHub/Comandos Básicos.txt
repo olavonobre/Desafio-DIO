@@ -1,0 +1,13 @@
+# Aqui vou listar alguns comandos básicos enquanto for aprendendo durante o curso.
+
+## Git Status.
+Retorna o status atual do Repositório Local, comparando com o servidor remoto.
+
+## Git add.
+Adiciona arquivos para serem "tracked"
+
+## Git Commit.
+Comita o trabalho realizado...ou a alteração feita no seu repositório...
+
+## Git Push.
+Faz o envio "upload" dos arquivos criados ou modificados para o repositório remoto. 
