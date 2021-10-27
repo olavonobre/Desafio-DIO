@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outras Formatações</title>
+</head>
+<body>
+    <h1>Outras formatações</h1>
+    <h2>Codigo-fonte e Pré-formatação</h2>
+    <p>O comando <code>document.getElementById('teste')</code> é escrito em linguagem JavaScript, para ficar neste formato basta usar a tag <mark>&lt; code &gt;</mark> </p>
+    <p>usando a tag <mark>&lt; code &gt;</mark> o codigo nao fica como queríamos
+    </p>
+    <code>
+        num = int(imput('Digite um número'))
+        if num % 2 == 0:
+            print(f'O número {num} é PAR')
+        else:
+            print(f'O número {num} é ÍMPAR')
+        print('Fim do Programa')
+    </code>
+    <p>para ficar no formato de código, como conhecemos..temos que usar a tag <mark>&lt; pre &gt;</mark> envelopando com o <mark>CTRL+SHIFT+P</mark> tudo que esta dentro da tag <mark>&lt; code &gt;</mark></p>
+    <pre>
+        <code>
+            num = int(imput('Digite um número'))
+            if num % 2 == 0:
+                print(f'O número {num} é PAR')
+            else:
+                print(f'O número {num} é ÍMPAR')
+            print('Fim do Programa')
+        </code>
+    </pre>
+    <p>E assim fica da forma que conhecemos o código</p>
+
+    <h2>Citações</h2>
+    <p>Como diria um pai de um amigo: <q>o computador é um burro muito rápido</q> para fazer esta citação basta usar a tag <mark>&lt; q &gt;</mark></p>
+    <h2>Citações completas</h2>
+    <p>Segundo Jeff Noble, no seu livro HTML para Leigos:</p>
+    <blockquote cite="https://books.google.pt/books?id=xlLcAwAAQBAJ&dq=html+para+leigos&hl=en&sa=X&redir_esc=y">
+        A diferença entre elementos inline e um bloco de texto é importante. Os elementos HTML neste capítulo descrevem os blocos de texto
+    </blockquote>
+    <h2>Abreviações</h2>
+    <p>Estou estudando <abbr title="Hypertext Markup Language">HTML</abbr>e <abbr title="Cascading Style Sheets">CSS</abbr>. Estou adorando!</p>
+    <h2>Texto Invertido</h2>
+    <p><bdo dir="rtl">Estou aprendendo a criar coisas em HTML.</bdo></p>
+</body>
+</html>
