@@ -1,0 +1,116 @@
+Doctype HTML: tudo o que você precisa saber
+
+Provavelmente, você já viu a declaração do Doctype HTML em diversos arquivos, como por exemplo: <!DOCTYPE html>. Mas você sabe o que isso significa?
+
+Neste artigo, você entenderá o que é o Doctype HTML, para que serve e as diversas formas ao passar dos anos, conforme as versões do HTML.
+
+Os tópicos deste artigo são:
+
+O que é o Doctype HTML
+Como declarar o Doctype no HTML
+Declaração do Doctype no HTML5
+Declarações do Doctype no HTML 4.0.1
+Declarações do Doctype no XHTML
+O uso do Doctype é obrigatório?
+O Doctype para clientes de e-mail
+O futuro do Doctype HTML
+
+O que é o Doctype HTML
+Apesar da sintaxe parecida, o Doctype não é uma tag do HTML. O Doctype HTML é uma declaração para informar ao navegador qual é a versão do HTML utilizada no arquivo. Essa declaração vem antes das tags HTML, portanto, geralmente é apresentada na primeira linha de um código.
+
+Até a versão 4, o HTML era baseado no SGML. Portanto, a declaração do Doctype era feita através do modo DTD (Document Type Declaration). A partir da versão 5, o HTML deixou de ser baseado em SGML, e dessa forma, simplificou até mesmo a declaração do doctype. Perceba que no exemplo abaixo, aparentemente não é declarado nenhuma versão. Na verdade, essa é a forma de declaração do HTML5, a mais nova versão do HTML:
+
+<!DOCTYPE html>  
+<html>  
+   //código HTML
+</html>
+Hoje em dia, todos os navegadores suportam a versão mais nova do HTML. Porém, ainda existem documentos de páginas baseadas em versões anteriores do HTML. Vamos então conhecer algumas delas através do doctype.
+
+Como declarar o Doctype no HTML
+Conforme explicado anteriormente, o doctype deve ser declarado anteriormente às tags HTML. Geralmente, esta declaração é a primeira linha do código. Ao longo das versões do HTML e do XHTML, o modo de se declarar o doctype foi sendo modificado. Anteriormente, essa declaração era feita com uma linha de código bem extensa. Hoje em dia, com a versão 5, está bem simples, contendo apenas 2 “palavras”.
+
+A declaração do doctype é case insensitive, ou seja, não difere letras maiúsculas de minúsculas. Portanto, pode ser usado como preferir. Vejamos os diversos exemplos abaixo, utilizando a declaração do novo formato:
+
+<!DOCTYPE HTML>
+ou
+<!DOCTYPE html>
+ou
+<!doctype html>
+ou
+<!doctype HTML>
+...
+Vejamos abaixo algumas das variações dessa declaração em outras versões do HTML e do XHTML.
+
+Declaração do Doctype no HTML5
+A partir da nova versão do HTML, o HTML5, a declaração do doctype passou a ser bem simplificada. Basta declarar como <!DOCTYPE html>:
+
+<!DOCTYPE html>
+
+Declarações do Doctype no HTML 4.0.1
+Caso seja necessário utilizar uma versão mais antiga do HTML, é importante conhecer as declarações. Na versão 4.0.1 do HTML, existem três formas distintas de se declarar o doctype.
+
+No HTML 4.01, a declaração do doctype HTML refere-se a um DTD (Document Type Declaration), pois o mesmo foi baseado no SGML. O DTD especifica as regras para linguagens de marcações, de forma que os navegadores renderizem o conteúdo corretamente.
+
+HTML 4.01 Strict
+Este DTD contém todos os elementos e atributos HTML, mas não inclui elementos de apresentação ou depreciados (como fonte). Também não é permitido o uso de Framesets. Para essa forma, a declaração é feita como no código abaixo:
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+HTML 4.01 Transitional
+Esse DTD contém todos os elementos e atributos HTML, incluindo elementos de apresentação e reprovados (como fonte). Assim como nos Strict, Framesets não são permitidos. Para essa forma, a declaração é feita como no código abaixo:
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+HTML 4.01 Frameset
+Este DTD possui todas as funcionalidades do HTML 4.01 Transitional, mas permite o uso de Framesets. Para essa forma, a declaração é feita como no código abaixo:
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+
+Declarações do Doctype no XHTML
+XHTML 1.0 Strict
+Este DTD contém todos os elementos e atributos HTML, mas não inclui elementos de apresentação ou depreciados (como fonte). O uso de Framesets também não é permitido. A marcação também deve ser escrita como XML bem formado. Para essa forma, a declaração é feita como no código abaixo:
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+XHTML 1.0 Transitional
+Esse DTD contém todos os elementos e atributos HTML, inclusive os elementos de apresentação e depreciados (como fonte). Porém, o uso de Framesets não é permitido. A marcação também deve ser escrita como XML bem formado. Para essa forma, a declaração é feita como no código abaixo:
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+XHTML 1.0 Frameset
+Este DTD é igual ao XHTML 1.0 Transitional, porém, este formato permite o uso de Frameset. Para essa forma, a declaração é feita como no código abaixo:
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+XHTML 1.1
+Esse DTD é igual a XHTML 1.0 Strict, mas permite adicionar módulos. Para essa forma, a declaração é feita como no código abaixo:
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+O uso do Doctype é obrigatório?
+Um documento HTML é composto pelas tags do HTML. Desde o HTML5, o DTD não é um requisito obrigatório. Porém, a presença do DTD garante que o navegador se comportará adequadamente e de maneira precisa. Quando não informamos o Doctype HTML, o navegador utiliza um recurso chamado de quirks mode, decidindo um padrão a ser seguido. Já quando é feita a declaração, o navegador entra no modo standard. Dessa forma, o navegador seguirá todos as especificações do HTML e do CSS adequadamente.
+
+Além disso, a falta do Doctype HTML, assim como o modo quirks do navegador, pode gerar falhas de vulnerabilidade. A falta desta declaração, mesmo em navegadores mais novos, torna as páginas vulneráveis a ataques como o RPO (Relative path Overwrite), que atua na injeção em folhas de estilos.
+
+Portando, é errado afirmar que o doctype não é obrigatório, pois a própria W3C orienta seu uso. O uso do Doctype HTML é essencial para qualquer documento. Sendo assim, seu uso é obrigatório perante as boas práticas e também para garantir o perfeito funcionamento e a segurança do documento.
+
+O Doctype para clientes de e-mail
+O desenvolvimento para e-mail não evoluiu da mesma forma que o desenvolvimento para web. Portanto, ainda não existe um padrão a ser seguido para o HTML em e-mails. Dessa forma, apesar de boa parte dos clientes de e-mail mais modernos e populares já terem como padrão o HTML5, nem sempre é uma boa escolha utilizá-lo. Isso acontece pois alguns clientes de e-mail ainda possuem dificuldade de lidar com essa versão.
+
+Segundo uma pesquisa da Campaign Monitor, (publicada em 2010 e atualizada em maio de 2019), o método mais adequado para e-mails é utilizando a versão para o XHTML 1.0 Transitional, ou seja:
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+Portanto, é importante identificar seu objetivo ao enviar o e-mail, e conhecer bem os receptores do mesmo. Você pode ainda verificar qual versão do Doctype HTML o cliente de e-mail suporta através do teste de cliente de e-mail.
+
+O futuro do Doctype HTML
+Como você viu anteriormente, apesar de parecer um recurso simples, é muito relevante compreender a importância de declarar o Doctype HTML, evitando problemas no documento, assim como auxiliando na correção de erros e mantendo-o mais seguro e moderno possível!
+
+Questionar sobre o futuro do doctype nas próximas versões do HTML pode parecer uma incógnita, mas na verdade é simples. O HTML5 deixou de ser baseado no SGML, portanto, o doctype deixou de ser uma DTD que informa a versão específica do HTML. Desde então, o declaração do Doctype serve para informar ao navegador que o documento se encontra em HTML. Portanto, o navegador processa e manipula o documento para a versão mais atual do HTML.
+
+Dessa forma, todas as próximas versões do HTML, como uma versão 6, 7, etc,  manterão a declaração da mesma forma que funcionam no HTML5: <!DOCTYPE html>.
+
+Artigos relacionados
+Comentários HTML: aprenda a comentar o seu código
+HTML5: suas novidades e atualizações
+HTML Div: o elemento de divisão do HTML
+HTML Básico: iniciando no desenvolvimento web com HTML
+HTML img: inserindo imagens em sua página
+O que é HTML? Entenda de forma descomplicada
+Publicado por
+
+Rafael Marques
