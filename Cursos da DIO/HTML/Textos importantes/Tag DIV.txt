@@ -1,0 +1,520 @@
+HTML Div: o elemento de divisão do HTML
+
+A HTML Div é um dos elementos mais conhecidos do HTML. Até o lançamento do HTML5, era muito utilizado para dividir todas sessões e todos os blocos do documento. Porém, com a atualização da versão 5 do HTML, começou a dividir o espaço com as demais tags semânticas. Ainda assim, é um elemento muito importante e muito utilizado. Neste artigo vamos explicar sobre a HTML Div, como funciona, como utilizar e muito mais.
+
+Portanto, você encontrará os seguintes tópicos nesse artigo:
+
+Para que serve uma Div no HTML
+Como utilizar a HTML Div: A tag <div>
+Atributos da Div HTML
+Alterando a cor de Fundo/Background da HTML Div
+ID e Classe
+A diferença entre Div e Span
+Posicionamento de HTML Div
+CSS Postition
+CSS Margin
+CSS Float
+Conclusão sobre HTML Div
+
+Para que serve uma Div no HTML
+O elemento HTML Div define uma divisão ou seção em um documento HTML. O elemento div é frequentemente usado como um contêiner para outros elementos, o que facilita na estilização de blocos. Também é muito útil para inclusão de interações com Scripts (JavaScript). Portanto, ele é definido com um contêiner genérico para conteúdo de fluxo.
+
+Diante disso, a HTML Div é muito utilizada quando precisamos agrupar elementos sem a necessidade do uso de um elemento semântico do HTML5. Isso acontece pois o elemento div não possui um valor semântico. Portanto, não representa nada para o navegador e para os mecanismos de buscas.
+
+Como é muito utilizado para agrupar elementos, acaba sendo um facilitador para organizar informações dentro de um layout. Dessa forma, é possível formatar e manipular os elementos, inclusive a própria div, através do CSS de uma forma organizada. Geralmente é acompanha de atributos de ID e classe, para poder facilitar essa organização e formatação.
+
+Como utilizar a HTML Div: a tag <div>
+Agora que já conhecemos a definição do elemento de divisão do HTML, vamos aprender como utilizá-la.
+
+A sintaxe do elemento HTML Div é através da tag de abertura <div> e de fechamento </div>. Por padrão, a div gera uma line-break (quebra de linha) automática ao ser utilizada. Isso ocorre pois possui como display padrão um elemento de bloco, ou seja display block. Portanto, para utilizar a div, basta colocar os elementos que quiser dentro da tag <div></div> como na sintaxe abaixo:
+
+<div>
+    ...
+</div>
+Dessa forma, vamos utilizar algumas divisões para poder separar os parágrafos no nosso exemplo abaixo:
+
+<div>
+    <p>Divisão 01</p>
+</div>
+<div>
+    <p>Divisão 02</p>
+</div>
+<div>
+    <p>Divisão 03</p>
+</div>
+Claro que podemos incluir qualquer outros elementos HTML, ou seja, outras tags, dentro de uma div HTML.
+
+Atributos da Div HTML
+O Elemento HTML Div costuma ter entre seus principais atributos:
+
+id – Define uma ID;
+class – Define uma classe;
+title – Define um título;
+height – Define uma altura;
+width – Define uma largura.
+Porém, com exceção do ID, da class e do title, todos os demais atributos já são considerados depreciados. Portanto, dessa forma, podemos definir a altura, a largura e a cor de fundo através do próprio estilo CSS, assim como diversas outras características.
+
+O HTML Div também suporta receber todos os atributos globais, assim como também os atributos eventuais.
+
+Alterando a cor de fundo/background da HTML Div
+Antes da versão 5 do HTML era possível utilizar o atributo bgcolor para poder escolher uma cor de background para a div. Porém, a partir da versão 5, o HTML passou a não ter mais suporte a este atributo.
+
+Portanto, para poder alterar a cor de fundo de uma div, devemos estilizar através do CSS. Para poder modificar a cor de fundo, basta utilizar a propriedade background ou background-color do CSS. Podemos utilizar o estilo inline, através do atributo style=”…”, através do CSS dentro das tags <style> ou ainda através de um folha de estilo externa.
+
+Para utilizar a propriedade do background ou background-color, basta declarar um valor da cor. Para isso, pode ser utilizado um código hexadecimal de cores, o nome da cor, ou ainda declarar as cores através do código rgb, rgba ou hsl. Portando, vejamos então abaixo as diversas formas de declarar uma cor de fundo:
+
+    <div style="background-color: red"></div>   
+
+    <div style="background-color: #FF0000"></div>
+
+    <div style="background-color: rgb(255,0,0);"></div>
+
+    <div style="background: red"></div>
+
+    <div style="background: #FF0000"></div>
+
+    <div style="background: rgb(255,0,0);"></div>
+Independente de qual dos códigos acima for utilizado, o resultado será o mesmo, uma div contendo um fundo na cor vermelha.
+
+Vejamos então outro exemplo, agora utilizando a tag <style> para declarar o CSS. Vamos estilizar todas as divs com uma altura de 50px e largura de 100px. Posteriormente, iremos definir uma cor para cada classe, de maneiras diferentes (nome da cor, código hexadecimal, valor RGB). Por fim, vamos incluir no documento três elementos HTML Div, cada um com uma classe:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Cores de fundo em HTML Div</title>
+    <style type="text/css">
+        div{
+            width: 100px;
+            height: 50px;
+        }
+        .azul{
+            background-color: blue;
+        }
+        .vermelho{
+            background: #FF0000;
+        }
+        .verde{
+            background: rgb(0,255,0);
+        }
+    </style>
+</head>
+<body>
+    <div class="azul"></div>   
+
+    <div class="vermelho"></div>
+
+    <div class="verde"></div>
+</body>
+</html>
+Com este exemplo, o resultado será conforme a imagem abaixo:
+
+Utilizando cores de fundo em divs
+Você pode utilizar uma tabela de cores HTML para poder experimentar mais a respeito.
+
+ID e classe
+Conforme explicado anteriormente, o HTML Div comporta receber os atributos ID e Class. Ou seja, é possível atribuir à uma div um ID único ou uma ou mais classes. Isso nos permite formatar um ou mais elementos de forma mais especifica e facilitada.
+
+Um ID é uma configuração única, ou seja, só podemos utilizar um ID em apenas um único elemento. Já uma classe é uma configuração que pode ser utilizada em mais de um elemento. Portanto, vejamos o exemplo abaixo:
+
+<div id="cabecalho">
+    <h2>Meu documento sobre Div HTML</h2>
+</div>
+<div id="corpo">
+    <div class="sessao_conteudo">
+        <h3>Meu conteúdo 01</h3>
+        <p>Meu paragrafo contendo texto</p>
+        <p>Meu paragrafo contendo texto</p>
+    </div>
+    <div class="sessao_conteudo">
+        <h3>Meu conteúdo 02</h3>
+        <p>Meu paragrafo contendo texto</p>
+        <p>Meu paragrafo contendo texto</p>
+    </div>    
+</div>
+<div id="rodape">
+    <p>Todos os direitos reservados</p>
+</div>
+Observe que nosso documento HTML foi dividido com três divs pais, cada uma contendo um ID única (cabecalho, corpo e rodape). Dentro da nossa div com a id corpo, recebemos duas divisões para o conteúdo. Observe que essas divisões receberam uma mesma classe: sessao_conteudo. Portanto, podemos estilizar as divs através de suas ids, e ainda podemos estilizar todas as divs que contêm a mesma classe de uma só vez. Para IDs, referenciamos no CSS através do “#”, por exemplo: #cabecalho. Já para classes, reconhecemos através de um “.”, ou seja, conforme este exemplo: “.sessao_conteudo“.
+
+Vejamos então o seguinte exemplo de estilo CSS para o documento apresentado no exemplo anterior:
+
+<style>
+    #cabecalho{
+        background-color: #cccccc;
+        width: 600px;
+        padding: 40px 2%;
+        color: white;
+        text-align: center;
+    }
+    #corpo{
+        background-color: red;
+        width: 600px;
+        padding: 10px 2%;
+    }
+    #rodape{
+        width: 600px;
+        padding: 10px 2%;
+        background-color: #888888;
+        color: white;
+        text-align: center;
+    }
+
+    .sessao_conteudo{
+        text-align: center;
+        width: 100%;
+        background-color: green;
+    }
+</style>
+Observe então o resultado conforme a imagem abaixo:
+
+Div HTML exemplo 01
+Observe que cada ID recebeu um estilo diferente. Observe também que ambas as divs que contêm a classe .sessao_conteudo receberam o mesmo estilo.
+
+A diferença entre Div e Span
+Uma dúvida muito comum para quem está aprendendo o HTML é a diferença entre as tags <div> e <span>. Ambas as tags representam elementos sem valor semântico e que podem conter outros elementos. Porém, geralmente um <span> costuma conter um texto dentro dele. Ainda assim, a principal diferença entre elas é que enquanto a <div> tem como padrão o display block, a tag <span> tem como padrão o display inline-block.
+
+Vejamos então o código abaixo, utilizando apenas um texto tanto nas divs quanto nos span:
+
+<span>meu span 1 </span>
+<span>meu span 2 </span>
+<div>minha div 1</div>
+<div>minha div 2</div>
+Dessa forma, observe o resultado conforme a imagem abaixo:
+
+Exemplo de spans e divs
+Observe que os span não receberam uma quebra de linha, ficaram um do lado do outro. Já a HTML Div automaticamente realiza uma quebra de linha.
+
+Para efeitos visuais, vamos agora utilizar o seguinte exemplo, incluindo um estilo CSS:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HTML Div vs HTML Span</title>
+<style>
+    .vermelho{
+        background-color: red;
+    }
+    .azul{
+        background-color: blue;
+    }
+    .verde{
+        background-color: green;
+    }
+    .rosa{
+        background-color: pink;
+    }
+</style>
+</head>
+<body>
+    <span class="vermelho"></span>
+    <span class="azul"></span>
+    <div class="verde"></div>
+    <div class="rosa"></div>    
+</body>
+</html>
+Com este exemplo, o resultado será conforme a imagem abaixo:
+
+Exemplo visual entre Div HTML e Span
+Dessa forma, fica mais evidente a diferença prática entre um elemento HTML Div e um elemento span.
+
+Posicionamento de HTML Div
+Através das propriedades do CSS podemos utilizar diversas posições. Vamos explicar aqui algumas delas. Para poder alterar a posição de um elemento HTML através do CSS, podemos modificar a propriedade de posição, assim como utilizando técnicas como margem e flutuação, dentre outras. Dessa forma, vamos entender as propriedades position, margin e float do CSS.
+
+CSS Postition
+A propriedade position permite definir o tipo de posição utilizada para o elemento. Com isso, podemos definir uma uma posição relativa, uma posição absoluta, ou ainda uma posição fixa. Também há a posição estática e a posição pegajosa. Vamos estudar as posições relativa, absoluta e fixa:
+
+Posição relativa
+Como sugere o nome, especifica uma posição relativa do elemento em relação a o elemento pai ou ao elemento anterior. Esta posição pode ser definida com as propriedades top, bottom, left e right. Vejamos então o exemplo abaixo:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HTML Div Position</title>
+    <style>
+        #elemento_pai{
+            width: 300px;
+            height: 300px;
+            background-color: #ccc;
+        }
+        .posrelativa{
+            position: relative;
+            width: 150px;
+            height: 60px;
+        }
+        .vermelho{
+            background-color: red;
+        }
+        .azul{
+            background-color: blue;
+        }
+        .top50{
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="elemento_pai">
+        <div class="posrelativa azul">01</div>
+        <div class="posrelativa vermelho">02</div>
+        <div class="posrelativa azul top50">03</div>
+    </div>
+</body>
+</html>
+Observe que aplicamos a todas as divs filhas uma classe contendo uma posição relativa. Observe também que a terceira div, através da classe .top50, incluímos um top de 50px. Como se trata de uma posição relativa, a div.top50 receberá uma distância de 50px de topo em relação à div anterior. Dessa forma, teremos um resultado conforme o exemplo da imagem abaixo:
+
+HTML Div com posição relativa
+Position absolute
+A posição absoluta representa uma posição que levará em consideração a distância em relação à div pai relativa. Portanto, elá terá uma posição independente dos demais elementos, podendo até mesmo ficar por cima ou por baixo dos demais elementos. Esta posição pode ser definida com as propriedades top, bottom, left e right. Vejamos então o exemplo abaixo:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HTML Div Position</title>
+    <style>
+        #elemento_pai{
+            width: 250px;
+            height: 250px;
+            background-color: #ccc;
+            position: relative;
+        }
+        .posrelativa{
+            position: relative;
+            width: 150px;
+            height: 150px;
+        }
+        .posabsoluta{
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 150px;
+            height: 150px;
+        }
+        .azul{
+            background-color: blue;
+        }
+        .vermelho{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="elemento_pai">
+        <div class="posrelativa azul">01</div>
+        <div class="posabsoluta vermelho">02</div>
+    </div>
+</body>
+</html>
+Dessa forma, o resultado do exemplo será conforme na imagem abaixo:
+
+HTML Div com posição absoluta
+Observe que utilizamos uma posição absoluta ao bloco vermelho. Como o elemento pai (div#elemento_pai) possui uma posição relativa, a div com posição absoluta levará em consideração apenas a posição do elemento pai. Como definimos um valor de distância do topo e distância da esquerda de 50px, chegamos ao exemplo acima. Se não tivéssemos atribuído as propriedades top e left, a mesma ficaria por cima do bloco azul.
+
+Position fixed
+A posição fixa é muito parecida com a posição absoluta. Porém, ela se mantém fixa, ou seja, independente da posição da barra de rolagem (scroll), este elemento se encontrará na mesma posição da tela. Esta posição pode ser definida com as propriedades top, bottom, left e right.
+
+Portanto, vejamos o exemplo abaixo:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HTML Div Position</title>
+    <style>
+        #corpo{
+            height: 10000px;
+            width: 100%;
+            background-color: #ccc;
+        }
+        #fixo{
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="corpo"></div>
+    <div id="fixo"></div>
+</body>
+</html>
+Observe então nas imagens abaixo a mesma página, porém com posição da barra de rolagem diferentes. Mesmo assim, a div#fixo se mantém na mesma posição em relação à tela:
+
+Posição Fixed
+
+CSS margin
+Através de uma margem, é possível manipular a posição de um elemento HTML. Com isso podemos posicionar um elemento HTML Div através da margin. Existem quatro tipos de margin: margin-top, margin-right, margin-bottom, margin-left. Ou seja, margem superior, margem à direita, margem inferior e margem à esquerda. Também podemos utilizar a propriedade margin, contendo um, dois ou quatro valores. Caso utilize apenas um valor, esse valor será aplicado a todas as margens. Caso utilize dois valores, como por exemplo margin:10px 5px, o primeiro valor será para as margens superior e inferior, já o segundo valor será para as margens direita e esquerda. Por fim, utilizando quatro valores, o primeiro representa a margem superior, o segundo margem a direita, o terceiro a margem inferior e o quarto a margem a esquerda.
+
+Desta forma, vejamos então o exemplo abaixo:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HTML Div Margin</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        .div_1{
+            background-color: red;
+            margin-bottom: 20px;
+        }
+        .div_2{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>    
+    <div class="div_1"></div>
+    <div class="div_2"></div>    
+</body>
+</html>
+Dessa forma, nosso elemento div.div_1 fica com uma margem inferior de 20px, portanto o resultado será como na imagem abaixo:
+
+HTML DIV com margem
+Podemos ainda utilizar a margem para centralizar uma HTML div. Para isso, basta definir que as margens à direita e à esquerda fiquem no modo automático. Dessa forma, a margem será definida igualmente para ambos os lados e, portanto, o elemento ficará centralizado. Vejamos o exemplo abaixo:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HTML Div Margin</title>
+    <style>
+        div#pai{
+            width: 300px;
+            height: 200px;
+            background-color: #ccc;
+        }
+        div#filha{
+            margin-right: auto;
+            margin-left: auto;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="pai">
+        <div id="filha"></div>
+    </div>
+</body>
+</html>
+Dessa forma, teremos o resultado abaixo:
+
+Margin auto
+Observe que o elemento ficou centralizado. Poderíamos também ter utilizado a propriedade de margem dessa forma: margin: 0 auto;.
+
+Este recurso é muito utilizado para a criação de contêiner com um limite de largura que deve se manter sempre centralizado na página. Portanto, é importante entender como funciona esta técnica, pois, muito provavelmente, você precisará utilizá-la ou verá em diversas folhas de estilo.
+
+CSS float
+Existe uma propriedade muito útil do CSS chamado de float, ou flutuação. Desta forma é possível manter um elemento flutuado. Por exemplo, quando queremos manter duas divs em uma mesma linha, podemos flutuar elas. Ou ainda quando queremos manter um texto e uma div flutuando ao lado desse texto. Podemos utilizar o float:left; para flutuar o elemento à esquerda ou ainda o float:right; para flutuar o elemento à direita. Para limpar uma flutuação podemos usar o float:none;. Porém, a flutuação é uma propriedade um pouco imprecisa, portanto, recomenda-se utilizar aliado a propriedades de margem ou padding. Para que não ocorra erros de renderização, também é importante, sempre que utilizar uma flutuação, limpar a mesma com a propriedade clear. Vejamos então o seguinte exemplo:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HTML Div Float</title>
+    <style>
+        div.container{
+            width: 400px;
+            background-color: #ccc;
+            height: auto;
+        }
+        div{
+            width: 100px;height: 100px;
+        }
+        .esquerda{
+            background-color: green;
+            float: left;
+        }
+        .direita{
+            background-color: blue;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="esquerda">Div 01</div>
+        <div class="direita">Div 02</div>
+        <div style="clear: both;"></div>
+    </div>
+</body>
+</html>
+Observe que no exemplo utilizamos uma div pai, com a classe .container, para poder conter os elementos dentro de até 400px. Posteriomente, incluímos duas divs, cada um contendo uma classe com flutuação para um dos lados. Por fim, utilizamos uma div com o estilo “clear:both” para poder limpar o efeito da flutuação. Vejamos então o resultado abaixo:
+
+Utiizando flutuação nas divs
+Caso não utilizássemos a propriedade clear ao final dos elementos flutuados, observe que o elemento pai, que contém uma altura automática sumiria, portanto, geraria uma falha no layout:
+
+<div class="container">
+    <div class="esquerda">Div 01</div>
+    <div class="direita">Div 02</div>
+</div>
+Exemplo de flutuação sem o clear
+Vamos agora ver uma forma de utilizar uma div flutuando ao lado de um texto:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HTML Div Float</title>
+    <style>
+        div.container{
+            width: 400px;
+            background-color: #ccc;
+            height: auto;
+        } 
+        .flutuante{
+            background-color: green;
+            float: left;
+            width: 100px;height: 100px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="flutuante">Div 01</div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec metus euismod, eleifend massa ac, maximus turpis. 
+Nunc tincidunt massa risus, vitae efficitur sapien posuere eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+per inceptos himenaeos. Donec vel posuere risus.</p>
+    <div style="clear: both;"></div>
+</div>
+</body>
+</html>
+Dessa forma, obtemos o resultado do exemplo conforme a imagem abaixo:
+
+HTML Div flutuante com texto
+Portanto, podemos utilizar o float para diversas situações, principalmente em casos envolvendo texto e HTML Div. Isso permite criar diversos elementos dentro do layout de nossas páginas web.
+
+Porém, apesar dos conhecimento sobre flutuação serem muito importantes, já são considerados ultrapassados para o desenvolvimento completo de layouts. Portanto, recomendamos utilizar a flutuação apenas em casos realmente necessário e não como elemento principal do seu layout.
+
+Conclusão sobre HTML Div
+Com este artigo, você já obtém um domínio completo sobre o elemento HTML Div. Aconselhamos ainda, que para um melhor aproveitamento, você estude a respeito dos diversos tipos de display, como por exemplo o flexbox e o grid.
+
+Portanto, conhecer as características, atributos e propriedades envolvendo HTML Div permite criar uma página HTML bem mais complexa. Porém, é necessário estar atento a quando utilizar uma divisão com HTML Div, pois com o HTML5, é importante manter um código semântico, e podemos criar divisões com outros elementos que carregam esse valor.
+
+Em nosso blog você pode encontrar mais artigos sobre HTML, CSS e diversos outros assuntos da área de desenvolvimento e TI. Portanto, recomendamos praticar bem todos os exemplos desse artigo, além de aproveitar para aprofundar seus estudos com outros artigos. Com isso, você poderá criar páginas HTML profissionais para o(s) seu(s) próprio(s) website(s).
+
+Você pode contratar um plano de hospedagem  para poder colocar suas páginas online!!! A HomeHost oferece diversos planos para você, escolha o que melhor lhe atender e comece agora a colocar online o seu projeto!
+
+Artigos relacionados
+HTML Básico: iniciando no desenvolvimento web com HTML
+HTML5: suas novidades e atualizações
+Converter HTML para PDF através da Classe Dom PHP
+HTML Redirect: Como redirecionar suas Páginas HTML
+Formulário HTML: criando forms HTML e enviando dados
+Doctype HTML: tudo o que você precisa saber
+Publicado por
+
+Rafael Marques
