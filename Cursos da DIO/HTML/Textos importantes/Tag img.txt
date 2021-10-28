@@ -1,0 +1,136 @@
+HTML img: inserindo imagens em sua página
+
+Neste tutorial, vamos aprender como utilizar o HTML img para inserir imagens e gifs em nossas páginas HTML. Portanto, você encontrará aqui os seguintes tópicos:
+
+A tag <img> do HTML
+Inserindo imagem localmente através do HTML img
+Inserindo imagem global através do HTML img
+Título e texto alternativo
+Largura e altura do HTML img
+Imagem flutuante
+Recomendações sobre HTML img
+
+A tag <img> do HTML
+Logo no inicio da web, as páginas continham apenas conteúdos de textos e links. Isso tornava os conteúdos um tanto quanto limitados e monótonos. Não demorou muito para serem criados recursos de inclusão de imagens nas páginas. No HTML, a tag responsável pela inserção de imagens é a tag <img>. Porém, o HTML tecnicamente não faz a inclusão da imagem em si, o que ele faz é linkar a imagem para a página, de forma que ela seja aberta como se estivesse inserida na mesma, parecido com o processo da tag link <a>. Dessa forma, podemos adicionar imagens tanto localmente quanto de forma global, ou seja, através de uma URL externa ao domínio principal. Além disso, também é importante reforçar que a tag <img> não possui uma tag de fechamento e traz consigo o padrão de display inline-block do CSS além de ajuste de largura e altura no padrão automático.
+
+Inserindo imagem localmente através do HTML img
+Para inserir uma imagem no HTML basta utilizar a tag <img> com o atributo src. Ou seja: o atributo src, ou source, vai conter a url da imagem que será inserida.
+
+Diante disso, a sintaxe final será:
+
+<img src="url">
+Para inserir uma imagem local, podemos apenas incluir o nome da imagem com sua extensão, como no exemplo abaixo:
+
+<img src="imagem.jpg">
+Se ela estiver contida dentro de uma pasta local, nós devemos referenciar a pasta também. Por exemplo, se minha página principal está contida na pasta public_html e dentro dela temos uma pasta chamada imagens, onde está a nossa imagem, utilizaremos a seguinte url:
+
+<img src="imagens/imagem.jpg">
+Agora digamos que temos uma pasta public_html onde dentro dela temos as pastas imagens e pages, onde a nossa página esta dentro da pasta pages e a imagem está dentro da pasta imagens. Dessa forma, utilizamos ../ para poder voltar uma pasta e assim entrar na pasta que queremos.
+
+<img src="../imagens/imagem.jpg">
+Por outro lado, podemos ainda incluir a url completa da nossa imagem. Digamos que nosso domínio é https://meudominio.com e utilizando o exemplo anterior. Dessa forma, utilizaremos o seguinte código:
+
+<img src="https://meudominio.com/public_html/imagens/imagem.jpg">
+Com isso, já estamos prontos para incluir qualquer imagem localmente a nossa página, utilizando o recurso HTML img.
+
+Inserindo imagem global através do HTML img
+Agora que já aprendemos a sintaxe básica do HTML img e como inserir imagens locais, vamos estudar como inserir uma imagem global, ou seja, que se encontra fora do nosso servidor, fora do nosso domínio. Para isso, basta adicionarmos a URL absoluta da imagem no atributo src.
+
+Digamos que você queira uma imagem que se encontra na URL absoluta https://www.outrodominio.com/galeria_de_fotos/foto_01.png . Dessa forma, basta utilizar o seguinte código:
+
+<img src="https://www.outrodominio.com/galeria_de_fotos/foto_01.png">
+Porém, encontramos um problema ao utilizar imagens externas: ficamos dependendo que o outro domínio esteja sempre funcionando, pois se em algum momento ele ficar fora do ar, a imagem não será carregada. Para evitarmos problemas com a sua HTML img, recomendamos que evite o uso de imagens externas. Além disso, outro grande problema pode ser a utilização de imagens que contêm direitos autorais. Portanto, esteja sempre atento a essas questões e, quando necessário, lembre-se de referenciá-las devidamente.
+
+Título e texto alternativo
+Além do atributo src, a tag <img> possui outros atributos que complementam a sua estrutura: podemos, por exemplo, incluir um atributo de título para a imagem. Esse título será mostrado apenas quando o usuário passar o mouse sobre a imagem.  Portanto, para incluir o título a imagem, basta chamar pelo atributo title=”…”. Vejamos então o exemplo abaixo:
+
+<img src="/logo.png" title="Logo da HomeHost">
+Com isso, teremos o seguinte resultado:
+
+
+Da mesma forma, também podemos incluir a nossa imagem, um texto alternativo. Esse texto será mostrado no local da imagem caso a URL da imagem esteja errada, a imagem não esteja em um formato suportado ou até que a imagem seja baixada. Para incluir o texto alternativo basta chamar pelo atributo alt=”…”. Também é uma prática muito bem vista pelos mecanismos de buscas, portanto muito utilizado para otimização de SEO. Vejamos abaixo um exemplo de como utilizar o texto alternativo na HTML img:
+
+<img src="foto_01.png" alt="Texto alternativo para descrever minha imagem">
+
+Largura e altura do HTML img
+A tag <img> traz consigo o padrão de altura e largura automática, de forma que ela irá incluir o tamanho original da imagem, sem distorções, ou irá ajustar dentro do container a qual ela for inserido. Porém, podemos manipular esse tamanho diretamente através do CSS ou ainda através do atributos height (altura) e width (largura). Se utilizarmos apenas um deles, o outro irá se ajustar automaticamente, proporcionalmente, sem distorcer a imagem. Utilizando os dois, ele irá conter exatamente a altura e a largura definidas, portanto poderá distorcer a imagem. Além disso, se você utilizar imagens com baixa resolução em tamanhos acima da original, muito provavelmente a mesma também ficará distorcida, por isso é muito importante usar imagens com uma resolução adequada para suas páginas. Vamos utilizar no exemplo abaixo o logo da Home Host:
+
+HTML img: Logo da HomeHost
+Inicialmente, iremos definir apenas uma largura de 100px para a logo.
+
+<img src="/logo.png" width="100">
+Dessa forma, o resultado da nossa imagem será:
+
+HTML img: Logo da HomeHost com ajuste de altura de 100px
+Observe que mesmo com ajuste apenas da largura, a altura se ajustou automaticamente, sem distorcer a imagem.
+Vejamos agora com a aplicação tanto de uma largura quanto de uma altura, ambas de 200px, o que acontecerá:
+
+HTML img: Logo da Home Host com ajuste de altura e largura a 200px
+Perceba então que, com isso, a imagem se ajustou à largura e à altura de 200px, porém ficou distorcida.
+
+Imagem flutuante
+Apesar da imagem trazer o display inline-block, muitas vezes queremos garantir que a mesma fique flutuante no texto, de forma que o texto consiga se adaptar à sua posição sem perder a formatação original. Portanto, para atingirmos esse objetivo, podemos utilizar o float na imagem através do CSS. Vejamos o exemplo abaixo aplicando o CSS no atributo style e com um texto gerado através do gerador de Lorem Ipsum:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Imagens Flutuantes</h2>
+<p><strong>Flutuando uma imagem para a direita</strong></p>
+
+<p>
+<img src="logo_homehost.png" alt="logo da Home Host" style="float:right;width:200px">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In efficitur vehicula erat. 
+Fusce vitae velit et risus imperdiet finibus quis a eros. 
+Donec ut diam lobortis dui viverra tincidunt. 
+Nullam consequat lacinia lacus vel scelerisque. 
+Curabitur maximus, mi a elementum malesuada, libero dolor suscipit turpis, 
+vitae mollis augue mauris convallis ex. Sed feugiat neque in dolor lacinia,
+ vitae eleifend ex consequat.Lorem ipsum dolor sit amet, 
+consectetur adipiscing elit. In efficitur vehicula erat. Fusce 
+vitae velit et risus imperdiet finibus quis a eros. 
+Donec ut diam lobortis dui viverra tincidunt. Nullam consequat
+ lacinia lacus vel scelerisque. Curabitur maximus, mi a elementum malesuada, 
+libero dolor suscipit turpis, vitae mollis augue mauris convallis ex. 
+Sed feugiat neque in dolor lacinia, vitae eleifend ex consequat.
+</p>
+
+<p><strong>Flutuando uma imagem para a esquerda</strong></p>
+<p>
+<img src="logo_homehost.png" alt="logo da Home Host" style="float:left;width:200px">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In efficitur vehicula erat. 
+Fusce vitae velit et risus imperdiet finibus quis a eros. 
+Donec ut diam lobortis dui viverra tincidunt. 
+Nullam consequat lacinia lacus vel scelerisque. 
+Curabitur maximus, mi a elementum malesuada, libero dolor suscipit turpis, 
+vitae mollis augue mauris convallis ex. Sed feugiat neque in dolor lacinia,
+ vitae eleifend ex consequat.Lorem ipsum dolor sit amet, 
+consectetur adipiscing elit. In efficitur vehicula erat. Fusce 
+vitae velit et risus imperdiet finibus quis a eros. 
+Donec ut diam lobortis dui viverra tincidunt. Nullam consequat
+ lacinia lacus vel scelerisque. Curabitur maximus, mi a elementum malesuada, 
+libero dolor suscipit turpis, vitae mollis augue mauris convallis ex. 
+Sed feugiat neque in dolor lacinia, vitae eleifend ex consequat.
+</p>
+
+</body>
+</html>
+Diante do exemplo acima, o resultado será:
+
+HTML img: Resultado do exemplo de imagens flutuantes
+
+Recomendações sobre HTML img
+Os principais formatos de imagens aceitas em todos navegadores são .jpeg ou .jpg, .png e ainda os .gif. Existem outros formatos que são aceitos, mas podem variar entre as diversas versões do navegador. Portanto, recomendamos utilizar as imagens nos formatos citados. Você também pode ler mais sobre formatos de imagens nesse artigo da Rock Content.
+
+Com esse tutorial, você já pode inserir qualquer imagem aos códigos HTML do seu site. Além disso, você pode modificar os códigos ensinados neste tutorial para se adequá-los ao seu desejo. Recomendamos também a leitura da Documentação Oficial da W3C sobre a tag <img> ou ainda desse outro artigo da W3C que explica diversas formas de estilizar as imagens. Também recomendamos a leitura aqui no nosso blog deste post sobre links HTML, onde você poderá aprender a incluir links a suas imagens.
+
+Artigos relacionados
+Doctype HTML: tudo o que você precisa saber
+HTML5: suas novidades e atualizações
+O que é HTML? Entenda de forma descomplicada
+Tabela de cores HTML: aplicando cores nas tags HTML
+HTML Div: o elemento de divisão do HTML
+Comentários HTML: aprenda a comentar o seu código
+Publicado por
+
+Rafael Marques
