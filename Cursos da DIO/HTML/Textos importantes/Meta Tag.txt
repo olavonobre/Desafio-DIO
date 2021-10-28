@@ -1,0 +1,141 @@
+Meta Tag: entenda como funcionam os metadados do HTML
+
+Atualmente todas as páginas HTML encontradas possuem alguma Meta Tag. Mas você sabe o que são e para que servem essas meta tags? Veremos nesse artigo os seguintes tópicos:
+
+O que é Meta Tag
+Viewport – Ativando o layout responsivo
+Meta dados Canonical
+Meta Tags básicas de SEO
+Metadados charset
+Metadados de idioma
+Meta tag Autor e Responder
+Redirecionamento
+Conclusões
+
+O que é Meta Tag
+As meta tags são linhas de código HTML, que descrevem o conteúdo do site. Portanto, são os metadados da página. Geralmente utilizado para inserir palavras chaves, descrições e informações importantes sobre a página. Muito utilizado para otimizar o SEO de um página.
+
+São implementados dentro das tags Head de um página. Dessa forma, passam instruções para os programas externos ou ações mais simples. Também relacionadas ao funcionamento da página como redirecionamento ou ainda ativação do responsivo.
+
+Vejamos abaixo um exemplo de como incluir meta tags em nosso código HTML:
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Título da Página</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="descrição da página">
+        <meta name="keywords" content="Palavras Chaves, Separadas, Por,Virgulas, Minha Pagina, Pagina 01">
+        <meta name="author" content="HomeHost">
+        <meta name="robots" content="index, follow">
+        <link rel=”canonical” href=”http://www.meusite.com.br/index.php” />
+    </head>
+
+    <body>
+
+    </body>
+
+</html>
+Meta Tag Viewport – Ativando o layout responsivo
+Essa meta tag é responsável para ativar o layout responsivo, portanto, uma das mais importantes utilizadas nos dias atuais.
+
+Seu código é:
+
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+Podendo alterar o valor de maximum-scale entre outros. Você também pode estar lendo mais a respeito no manual da mozilla ou ainda no tutorial da W3C Schools.
+
+Meta dados Canonical
+Muitas vezes, criamos diversos links ao criar uma página. Dessa forma, os buscadores leem diversas páginas com conteúdo repetido. Uma forma de evitar isso é utilizando um metadados conhecido como canonical.
+
+Basta utilizar o URL que desejamos que seja lido como principal, e assim todos os demais links serão sempre lidos como uma página única e não mais como conteúdo repetido:
+
+<link rel=”canonical” href=”http://www.meusite.com.br/index.php” />
+repare que apesar de ser um metadados, não é utilizado a meta tag, e sim a tag link.
+
+Meta Tags básicas de SEO
+SEO nada mais é que otimização para os mecanismos de buscas, como Google, por exemplo. Você pode ler mais sobre SEO em nossos Artigos. As principais meta tags de SEO são as de descrição, titulo, palavra chaves e robots.
+
+Título
+A mais importante tag a ser definida para o SEO é o título. É um metadados definido pela tag <title> e </title>:
+
+<title>Título da minha página</title>
+Meta tag description
+Essa meta Tag define uma descrição a página, geralmente recomenda-se a utilização de cerca de até 90 caracteres para a mesma. Descreva o conteúdo da página de uma forma a estimular o interesse das pessoas em conhecer mais sobre o conteúdo da página, para aumentar a visitação do seu site.
+
+<meta name="description" content="Descrição da pagina">
+Meta tag Keywords
+Esse metadados deve ser utilizado para descrever as palavras chaves da página. Separa-se cada palavra-chave através de um vírgula.
+
+<meta name="keywords" content="palavra, palavra chave, separadas por virgulas, minha pagina, pagina,"/>
+Esse tipo de meta tag deve ser bem definida, pois o seu mal uso, torna-o inutilizado. Hoje em dia, já não possuem tanta importância, porém quando bem definidas, ainda fazem uma diferença significativa no sentido de SEO. Deve-se então ter cuidado, pois, ao mesmo tempo que pode ajudar, também pode ser um artifício que pode atrapalhar os buscadores.
+
+Meta tag robots
+Em alguns casos, queremos que nosso site/página não seja indexada pelos buscadores. A forma mais eficaz de se fazer isso é usando o arquivo robots.txt, porém também é possível realizar através dos robots conforme os códigos abaixo:
+
+<meta name="robots" content="index,follow">
+<meta name="robots" content="noindex,follow">
+<meta name="robots" content="index,nofollow">
+<meta name="robots" content="noindex,nofollow">
+<meta name="robots" content="noarchive">
+Nos códigos acima, os valores “index” e “noindex” referem-se ao tratamento da página inicial: se o buscador deve ou não incluí-la nos resultados. Os valores “follow” e “nofollow” referem-se aos links da página inicial, se eles devem ser visitados e indexados ou não.
+
+Metadados charset
+Para definir o padrão de caracteres utilizado, utilizamos o meta dados charset e chamamos pelo padrão, que no caso do latino americano é o UTF-8. É recomendável utilizar esta meta tag em todas as páginas do seu site.
+
+<meta charset="utf-8">
+Você também pode especificar o tipo de conteúdo da página e o conjunto de caracteres que ele usa através do metadados abaixo:
+
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+
+Metadados de idioma
+Outra forma de estarmos definindo também um idioma a nossa página é através da meta tag content-language:
+
+<meta http-equiv="content-language" content="pt-br">
+Dessa forma, você define que o idioma da página está em Português do Brasil.
+
+Como exemplo, alguns outros valores possíveis:
+
+pt Português;
+pt-br Português do Brasil;
+en Inglês;
+en-us Inglês dos EUA;
+en-gb Inglês Britânico;
+fr Francês;
+de Alemão;
+es Espanhol;
+it Italiano;
+ru Russo;
+zh Chinês;
+ja Japonês.
+
+Meta tag Autor e Responder
+Existe também o metadados que define um autor para a página. Dessa forma, é como se definisse quem é o responsável por esta página e sua manutenção. Também é possível aplicar um metadados de responder para. Ou seja, se for necessário entrar em contato sobre a página, para quem seria enviado esta resposta. Vejamos então as duas meta tags abaixo:
+
+<meta name="author" content="Home Host">
+<meta name="reply-to" content="exemplo@example.com">
+
+Redirecionamento
+Através da meta tag http-equiv=”refresh” é possível também realizar um redirecionamento.
+
+<meta http-equiv="refresh" content="5 ;url=http://www.outrosite.com/">
+Dessa forma, em 5 segundos, após aberto a página inicial, a mesma será redirecionada para o URL digitado acima.
+
+Você pode ver mais sobre redirecionamento HTML através do nosso artigo.
+
+Conclusão
+Diante a tudo que foi apresentado neste artigo, já é possível entender e utilizar diversas formas de meta tags. Ainda assim, é importante saber quer por mais que os meta dados sejam ótimas ferramentas, o conteúdo da sua página importa muito mais que qualquer dado informado. Portanto, os metadados tem como objetivo auxiliar os navegados e buscadores, porém não garantem o perfeito funcionamento de uma página. Assim então, é importante mesclar um bom conteúdo com um bom layout e ainda com os metadados corretos!
+
+ 
+
+Artigos relacionados
+Converter HTML para PDF através da Classe Dom PHP
+HTML Div: o elemento de divisão do HTML
+HTML Básico: iniciando no desenvolvimento web com HTML
+HTML Redirect: Como redirecionar suas Páginas HTML
+Formulário HTML: criando forms HTML e enviando dados
+Comentários HTML: aprenda a comentar o seu código
+Publicado por
+
+Rafael Marques
+Desenvolvedor e Escritor apaixonado por Tecnologia, Empreendedorismo e Educação.
